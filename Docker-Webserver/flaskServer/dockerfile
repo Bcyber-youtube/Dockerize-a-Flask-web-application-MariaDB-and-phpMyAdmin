@@ -1,0 +1,8 @@
+FROM python:latest
+RUN apt-get update
+RUN apt-get -y upgrade
+RUN pip install --upgrade pip
+RUN pip install flask
+RUN pip install mariadb
+WORKDIR /flaskProject
+CMD ["python", "app.py"]
